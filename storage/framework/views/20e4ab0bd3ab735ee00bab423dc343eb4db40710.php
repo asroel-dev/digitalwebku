@@ -1,0 +1,202 @@
+
+<?php $__env->startSection('title', 'Add New Post'); ?>
+<?php $__env->startSection('content'); ?>
+    <form action="<?php echo e(route('berita.store')); ?>" method="POST" enctype="multipart/form-data">
+        <?php echo csrf_field(); ?>
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12">
+                <div class="card shadow mb-3 mb-4">
+                    <div class="card-header py-3">
+                        <a href="<?php echo e(route('berita.index')); ?>" class="btn btn-warning"><i class="fa fa-arrow-left"
+                                aria-hidden="true"></i> Back</a>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="d-flex flex-column mb-8 fv-row">
+                            <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+                                <span class="required">Judul</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
+                                    title="Isi Judul Berita"></i>
+                            </label>
+                            <input type="text"
+                                class="form-control form-control-solid <?php $__errorArgs = ['judul'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>"
+                                placeholder="Masukkan Judul Berita" name="judul" required  value="<?php echo e(old('judul')); ?>" />
+                                <?php $__errorArgs = ['judul'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong><?php echo e($message); ?></strong>
+                                    </span>
+                                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Isi Berita</label>
+                            <textarea cols="100" class="form-control <?php $__errorArgs = ['isi_berita'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('isi_berita')); ?>"  name="isi_berita" id="isi_berita"></textarea>
+                            <?php $__errorArgs = ['isi_berita'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong><?php echo e($message); ?></strong>
+                                </span>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                        </div>
+
+
+
+
+
+                        <div class="text-right mt-5">
+                            <button name="draft" value="N" class="btn btn-sm btn-light btn-block">Simpan Sebagai
+                                Draft</button>
+                            <button name="publish" value="Y" class="btn btn-sm btn-primary btn-block">Publish</button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+
+
+                <div class="card shadow  ">
+                    <div class="card-header py-3">
+                        Kategori Berita
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <select class="form-control <?php $__errorArgs = ['kategori_id'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" name="kategori_id">
+                                <option value="" holder>-Choose Category-</option>
+                                <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($category->id); ?>"><?php echo e($category->name); ?></option>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            </select>
+                            <?php $__errorArgs = ['kategori_id'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong><?php echo e($message); ?></strong>
+                                </span>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card shadow mb-3 ">
+                    <div class="card-header py-3">
+                        Image
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <img src="<?php echo e(asset('assets_panel/image/no-image.jpg')); ?>" id="preview" alt=""
+                                class="img-fluid mb-2" width="300px">
+                            <input type="file" class="form-control <?php $__errorArgs = ['gambar'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" id="gambar"
+                                name="gambar">
+                            <?php $__errorArgs = ['gambar'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong><?php echo e($message); ?></strong>
+                                </span>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('js'); ?>
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2({
+                placeholder: "Pilih Tag",
+                allowClear: true,
+                tags: true,
+                tokenSeparators: [',', ' ']
+            });
+
+
+        });
+
+
+        $(document).ready(function() {
+            CKEDITOR.replace('isi_berita',{
+                height: 700
+            });
+        });
+
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#preview').attr('src', e.target.result);
+                    $('#preview').show();
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#gambar").change(function() {
+            readURL(this);
+        });
+    </script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin.layouts.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/asrulramadhan/Sites/satpol/resources/views/admin/berita/create.blade.php ENDPATH**/ ?>
