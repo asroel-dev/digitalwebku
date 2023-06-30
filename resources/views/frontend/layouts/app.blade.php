@@ -229,7 +229,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        {{-- <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                             <div class="footer-widget__column footer-widget__non-profit clearfix">
                                 <h3 class="footer-widget__title">Informasi</h3>
                                 <ul class="footer-widget__non-profit-list list-unstyled clearfix">
@@ -238,7 +238,7 @@
                                     @endforeach
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                             <div class="footer-widget__column footer-widget__contact">
                                 <h3 class="footer-widget__title">Alamat</h3>

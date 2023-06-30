@@ -26,7 +26,6 @@ Route::get('locale/{locale}', Function($locale){
     // Route::get('/galeri-gambar', [App\Http\Controllers\FrontController::class, 'galeriGambar'])->name('galerigambar.page');
     // Route::get('/chart', [App\Http\Controllers\FrontController::class, 'chart'])->name('chart-front');
     // Route::get('/chartlabel', [App\Http\Controllers\FrontController::class, 'chartLabel'])->name('chart-label-front');
-// });
 
 
 

@@ -4,8 +4,8 @@
      data-kt-drawer-toggle="#kt_aside_mobile_toggle">
      <div class="aside-logo flex-column-auto" id="kt_aside_logo">
          <a href="">
-             {{-- <h4 class="text-white">SATPOL-PP</h4> --}}
-             <img src="{{asset('uploads/foto_website/'.$profil->image_white)}}" alt="" style="width:100%">
+             <h4 class="text-white">DIGITAL WEBKU</h4>
+             {{-- <img src="{{asset('uploads/foto_website/'.$profil->image_white)}}" alt="" style="width:100%"> --}}
          </a>
          <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"
              data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"

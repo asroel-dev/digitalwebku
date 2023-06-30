@@ -1,4 +1,5 @@
 
+<?php $__env->startSection('title', 'Semua Berita'); ?>
 <?php $__env->startSection('content'); ?>
 
     <div class="stricky-header stricked-menu main-menu">

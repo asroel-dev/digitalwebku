@@ -1,4 +1,5 @@
 @extends('frontend.layouts.app')
+@section('title', 'Semua Berita')
 @section('content')
 
     <div class="stricky-header stricked-menu main-menu">

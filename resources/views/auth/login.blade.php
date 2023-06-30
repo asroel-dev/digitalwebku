@@ -4,17 +4,17 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>{{ $profil->nama_website }}</title>
+        <title>Halaman Login </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{{ $profil->nama_website }}" />
-        <meta name="keywords" content="{{ $profil->nama_website }}" />
-        <meta name="author" content="{{ $profil->nama_website }}" />
-        <meta name="email" content="{{ $profil->email }}" />
-        <meta name="website" content="{{ $profil->nama_website }}" />
+        <meta name="description" content="Digital Webku" />
+        <meta name="keywords" content="Digital Webku" />
+        <meta name="author" content="Digital Webku" />
+        <meta name="email" content="Digital Webku" />
+        <meta name="website" content="Digital Webku" />
         <meta name="Version" content="v4.4.0" />
 
         <!-- favicon -->
-        <link rel="shortcut icon" href="{{ asset('uploads/foto_website/' . $profil->favicon) }}" />
+        {{-- <link rel="shortcut icon" href="{{ asset('uploads/foto_website/' . $profil->favicon) }}" /> --}}
         
         <!-- Css -->
         <!-- Bootstrap Css -->
@@ -55,9 +55,11 @@
                                     <div class="card login-page border-0" style="z-index: 1">
                                         <div class="card-body p-0">
                                             <div class="main-menu__logo mb-5" style="">
-                                                <a href="/"><img height="90px"
+                                                <a href="/">
+                                                    {{-- <img height="90px"
                                                         src="{{ asset('uploads/foto_website/' . $profil->image) }}"
-                                                        alt=""></a>
+                                                        alt=""> --}}
+                                                    </a>
                                             </div>
                                             <h4 class="card-title text-center">Login</h4>  
                                             <form class="login-form mt-4" method="POST" action="{{route('login')}}">
@@ -114,7 +116,7 @@
                         </div> <!-- end about detail -->
                     </div> <!-- end col -->    
 
-                    <div class="col-lg-8 offset-lg-4 padding-less img order-1 jarallax" data-jarallax data-speed="0.5" style="background-image:url('{{asset('uploads/foto_website/'.$profil->image_login)}}')"></div><!-- end col -->    
+                    {{-- <div class="col-lg-8 offset-lg-4 padding-less img order-1 jarallax" data-jarallax data-speed="0.5" style="background-image:url('{{asset('uploads/foto_website/'.$profil->image_login)}}')"></div><!-- end col -->     --}}
                 </div><!--end row-->
             </div><!--end container fluid-->
         </section><!--end section-->

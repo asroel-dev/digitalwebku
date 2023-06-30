@@ -8,6 +8,7 @@ use App\Models\Identitas;
 use App\Models\ProfilWebsite;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
+use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -31,11 +32,6 @@ class AppServiceProvider extends ServiceProvider
 
 
     {
-
         Paginator::useBootstrap();
-        View::share('menu', Menu::with('details')->orderBy('urutan', 'ASC')->get());
-        View::share('profil', Identitas::first());
-        View::share('kategori_file', Kategori::where('aktif', 'Y')->get());
-
     }
 }

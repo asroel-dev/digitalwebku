@@ -7,7 +7,7 @@
          </div>
          <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
              <a href="" class="d-lg-none">
-                 <img alt="Logo" src="{{asset('uploads/foto_website/'.$profil->image_white)}}" class="h-35px" />
+                 {{-- <img alt="Logo" src="{{asset('uploads/foto_website/'.$profil->image_white)}}" class="h-35px" /> --}}
              </a>
          </div>
 

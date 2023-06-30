@@ -28,11 +28,8 @@
                     <div class="swiper-slide">
                         <div class="image-layer-two"
                             style="background-image: url(<?php echo e(asset('uploads/foto_banner/' . $b->gambar)); ?>);"></div>
-                        <!-- /.image-layer -->
-
                         
                         
-
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-12">
@@ -43,8 +40,6 @@
                             </div>
                         </div>
                     </div>
-
-                    
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
 
@@ -86,18 +81,14 @@
                                 <div class="news-one__content-inner">
                                     <div class="news-one__content">
                                         <ul class="list-unstyled news-one__meta">
-                                            <li><a href="<?php echo e(route('beritapage.detail', $post->slug)); ?>"><i
-                                                        class="far fa-user-circle"></i> Admin</a>
-                                            </li>
+                                            
                                         </ul>
-                                        <h3 class="news-one__title"><a
-                                                href="<?php echo e(route('beritapage.detail', $post->slug)); ?>"><?php echo e($post->judul); ?></a></h3>
+                                        
                                                 <p class="causes-one__text"><?php echo \Illuminate\Support\Str::limit($post->isi_berita, 160); ?>.</p>
                                     </div>
                                     <div class="news-one__bottom">
                                         <div class="news-one__read-more">
-                                            <a href="<?php echo e(route('beritapage.detail', $post->slug)); ?>"> <span
-                                                    class="icon-right-arrow"></span> Selengkapnya</a>
+                                            
                                         </div>
                                         <div class="news-one__share">
                                             <a href="#"><i class="fas fa-share-alt"></i></a>
@@ -188,32 +179,7 @@
     </section>
     <!--Become Volunteer One End-->
 
-    <section class="events-one">
-        <div class="events-one-shape-1" style="background-image: url(assets/images/shapes/events-one-shape-1.png)">
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <?php $__currentLoopData = $kategori_file; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="col-xl-2 col-lg-2  wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                    <div class="feature-one__single">
-                        <div class="feature-one__single-bg"
-                            style="background-image: url(assets/images/shapes/feature-one-shape-1.png);"></div>
-                        <div class="feature-one__top">
-                            <div class="feature-one__top-inner">
-                                <div class="feature-one__top-title-box">
-                                    <h3 class="feature-one__top-title"><a href="/dokumen?kategori=<?php echo e($item->slug); ?>"><?php echo e($item->name); ?> <br>
-                                             </a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="feature-one__text"><?php echo e($item->deskripsi); ?></p>
-                        <a href="/dokumen?kategori=<?php echo e($item->slug); ?>" class="thm-btn feature-one__btn">Lihat</a>
-                    </div>
-                </div>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            </div>
-        </div>
-    </section>
+    
 
 
 

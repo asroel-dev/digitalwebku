@@ -208,16 +208,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                            <div class="footer-widget__column footer-widget__non-profit clearfix">
-                                <h3 class="footer-widget__title">Informasi</h3>
-                                <ul class="footer-widget__non-profit-list list-unstyled clearfix">
-                                    <?php $__currentLoopData = $kategori_file; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <li><a href="/dokumen?kategori=<?php echo e($item->slug); ?>"><?php echo e($item->name); ?></a></li>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </ul>
-                            </div>
-                        </div>
+                        
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                             <div class="footer-widget__column footer-widget__contact">
                                 <h3 class="footer-widget__title">Alamat</h3>

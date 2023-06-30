@@ -13,7 +13,7 @@
             <ul class="thm-breadcrumb list-unstyled">
                 <li><a href="index.html">Home</a></li>
                 <li><span>/</span></li>
-                <li class="active"> <a href="{{ $data->slug }}">{{ $data->judul }}</a> </li>
+                <li class="active"> <a href="{{ $halaman->slug }}">{{ $halaman->judul }}</a> </li>
             </ul>
         </div>
     </div>
@@ -26,13 +26,13 @@
             <div class="col-xl-8 col-lg-7">
                 <div class="news-details__left">
                     <div class="news-details__img">
-                        @if ($data->ext == 'pdf')
-                        <iframe width="100%" height="700px" src="{{ asset('uploads/foto_statis/' . $data->gambar) }}" frameborder="0"></iframe>
+                        @if ($halaman->ext == 'pdf')
+                        <iframe width="100%" height="700px" src="{{ asset('uploads/foto_statis/' . $halaman->gambar) }}" frameborder="0"></iframe>
                         @else
-                        <img src="{{ asset('uploads/foto_statis/' . $data->gambar) }}" alt="">
+                        <img src="{{ asset('uploads/foto_statis/' . $halaman->gambar) }}" alt="">
                         @endif
                         <div class="news-details__date">
-                            <p>{{ $data->tgl_posting  }}</p>
+                            <p>{{ $halaman->tgl_posting  }}</p>
                         </div>
                     </div>
                     <div class="news-details__content">
@@ -40,8 +40,8 @@
                             <li><a href="#"><i class="far fa-user-circle"></i> Admin</a>
                             </li>
                         </ul>
-                        <h3 class="news-details__title">{{ $data->judul }}</h3>
-                        <p class="news-details__text-1">{!! $data->isi_halaman !!}</p>
+                        <h3 class="news-details__title">{{ $halaman->judul }}</h3>
+                        <p class="news-details__text-1">{!! $halaman->isi_halaman !!}</p>
                     </div>
                     <div class="news-details__bottom">
                         <span class=""> Bagikan postingan ini </span> 

@@ -28,15 +28,12 @@
                     <div class="swiper-slide">
                         <div class="image-layer-two"
                             style="background-image: url({{ asset('uploads/foto_banner/' . $b->gambar) }});"></div>
-                        <!-- /.image-layer -->
-
                         {{-- <div class="main-slider-two-shape-1">
                             <img src="assets/images/shapes/main-slider-two-shape-1.png" alt="">
                         </div> --}}
                         {{-- <div class="main-slider-two-shape-2">
                             <img src="assets/images/shapes/main-slider-two-shape-2.png" alt="">
                         </div> --}}
-
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-12">
@@ -51,8 +48,6 @@
                             </div>
                         </div>
                     </div>
-
-                    
                 @endforeach
             </div>
 
@@ -94,18 +89,20 @@
                                 <div class="news-one__content-inner">
                                     <div class="news-one__content">
                                         <ul class="list-unstyled news-one__meta">
-                                            <li><a href="{{ route('beritapage.detail', $post->slug) }}"><i
+                                            {{-- <li><a href="{{ route('blog.detail', $post->slug) }}"><i
                                                         class="far fa-user-circle"></i> Admin</a>
-                                            </li>
+                                            </li> --}}
                                         </ul>
-                                        <h3 class="news-one__title"><a
-                                                href="{{ route('beritapage.detail', $post->slug) }}">{{ $post->judul }}</a></h3>
+                                        {{-- <h3 class="news-one__title">
+                                            <a
+                                                href="{{ route('blog.detail', $post->slug) }}">
+                                                {{ $post->judul }}</a></h3> --}}
                                                 <p class="causes-one__text">{!! \Illuminate\Support\Str::limit($post->isi_berita, 160) !!}.</p>
                                     </div>
                                     <div class="news-one__bottom">
                                         <div class="news-one__read-more">
-                                            <a href="{{ route('beritapage.detail', $post->slug) }}"> <span
-                                                    class="icon-right-arrow"></span> Selengkapnya</a>
+                                            {{-- <a href="{{ route('blog.detail', $post->slug) }}"> <span
+                                                    class="icon-right-arrow"></span> Selengkapnya</a> --}}
                                         </div>
                                         <div class="news-one__share">
                                             <a href="#"><i class="fas fa-share-alt"></i></a>
@@ -200,7 +197,7 @@
     </section>
     <!--Become Volunteer One End-->
 
-    <section class="events-one">
+    {{-- <section class="events-one">
         <div class="events-one-shape-1" style="background-image: url(assets/images/shapes/events-one-shape-1.png)">
         </div>
         <div class="container-fluid">
@@ -225,7 +222,7 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 
