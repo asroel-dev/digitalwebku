@@ -23,26 +23,32 @@ class FrontController extends Controller
     public function index(Request $request)
     {
 
-        $title = Identitas::first()->nama_website;
-        $data = Menu::with('details')->orderBy('urutan', 'ASC')->get();
-        $berita = Berita::limit('3')->orderBy('tanggal', 'DESC')->get();
-        $kategori_file = Kategori::where('aktif', 'Y')->get();
-        $banner = Banner::get();
-        $sambutan = Identitas::first();
-        $Dokumen = Dokumen::get();
-        $gambar = Gallery::orderBy('id', 'DESC')->take(10)->get();
+        $sub = $request->subdomain;
+        $identitas = Identitas::where('subdomain',$sub)->first();
+        if ($identitas) {
+            $data = Menu::with('details')->orderBy('urutan', 'ASC')->get();
+            $berita = Berita::limit('3')->orderBy('tanggal', 'DESC')->get();
+            $kategori_file = Kategori::where('aktif', 'Y')->get();
+            $banner = Banner::get();
+            $sambutan = Identitas::first();
+            $Dokumen = Dokumen::get();
+            $gambar = Gallery::orderBy('id', 'DESC')->take(10)->get();
 
-        return view('frontend.index', 
-        compact(
-        'kategori_file',
-        'title',
-        'berita',
-        'Dokumen',
-        'sambutan',
-        'gambar',
-        'data',
-        'banner',
-        ));
+            return view('frontend.index', 
+            compact(
+                'kategori_file',
+                'identitas',
+                'berita',
+                'Dokumen',
+                'sambutan',
+                'gambar',
+                'data',
+                'banner',
+                ));
+        } else {
+            return '404';
+        }
+        
     }
 
 
@@ -158,8 +164,9 @@ class FrontController extends Controller
 
 
 
-    public function detailHalaman($slug)
+    public function detailHalaman(Request $request)
     {
+        $slug = $request->slug;
         $konfigurasi = Identitas::first();
         $data =  Halaman::where('slug', $slug)->first();
         $title =  $data->judul;
@@ -167,6 +174,7 @@ class FrontController extends Controller
         $menusamping = Menu::with('details')->orderBy('urutan', 'ASC')->where('id',$data->menu)->first();
         $kategori_all = Kategori::where('aktif', 'Y')->get();
         $related = Berita::orderBy('tanggal', 'DESC')->take(4)->get();
+
 
             return view('frontend.halaman', compact('data','konfigurasi','menusamping','title','description','kategori_all','related'));
     }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> {{ $title ?? $profil->judul }} </title>
+    <title> @yield('title') </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('uploads/foto_website/' . $profil->favicon) }}" />
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('uploads/foto_website/' . $profil->favicon) }}" />
