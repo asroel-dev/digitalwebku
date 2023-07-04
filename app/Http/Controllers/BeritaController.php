@@ -23,10 +23,9 @@ class BeritaController extends Controller
     public function index(Request $request)
     {
         $konfigurasi = Identitas::first();
-
+        $sub = Auth::user()->subdomain;
         if ($request->ajax()) {
-            $data = Berita::with('kategori')->orderBy('tanggal', 'DESC')->get();
-
+            $data = Berita::where('subdomain', $sub)->with('kategori')->orderBy('tanggal', 'DESC')->get();
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->editColumn('gambar', function ($data) {
@@ -98,6 +97,7 @@ class BeritaController extends Controller
             'slug' => Str::slug($request->judul),
             'isi_berita' => $request->isi_berita,
             'username' => Auth::user()->name,
+            'subdomain' => Auth::user()->subdomain,
             'kategori_id' => $request->kategori_id,
             'hari' => getHari(date('l')),
             'tanggal' => date('Y-m-d'),
@@ -166,6 +166,7 @@ class BeritaController extends Controller
             'slug' => Str::slug($request->judul),
             'isi_berita' => $request->isi_berita,
             'username' => Auth::user()->name,
+            'subdomain' => Auth::user()->subdomain,
             'kategori_id' => $request->kategori_id,
         ];
 

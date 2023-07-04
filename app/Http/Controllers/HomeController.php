@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Agenda;
 use App\Models\Berita;
-use App\Models\Kategori;
 use App\Models\Dokumen;
-use App\Models\Statistik;
+use App\Models\Kategori;
 use App\Models\Pengaduan;
+use App\Models\Statistik;
 use Illuminate\Http\Request;
 // use DB;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class HomeController extends Controller
@@ -32,23 +33,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $beritaCount = Berita::count();
-        $pengunjungCount = Statistik::count();
-        $dokumenCount = Dokumen::count();
-        $beritaView = Berita::orderBy('dibaca', 'DESC')->take(5)->get();
-        $kategori = Kategori::where('name', 'Pengumuman')->first();
+        $sub = Auth::user()->subdomain;
+        $beritaCount = Berita::where('subdomain',$sub)->count();
+        $pengunjungCount = Statistik::where('subdomain',$sub)->count();
+        $dokumenCount = Dokumen::where('subdomain',$sub)->count();
+        $beritaView = Berita::where('subdomain',$sub)->orderBy('dibaca', 'DESC')->take(5)->get();
+        $kategori = Kategori::where('subdomain',$sub)->where('name', 'Pengumuman')->first();
         $pengaduanCount = '0';
         $agendaCount = '0';
-        // $pengaduanCount = Pengaduan::count();
-        // $pengaduan = Pengaduan::orderBy('tanggal', 'DESC')->get();
         $pengaduan = '0';
         return view('home', compact('beritaCount', 'beritaView', 'agendaCount', 'pengaduanCount', 'pengaduan','pengunjungCount','dokumenCount'));
     }
 
     public function chart()
     {
-
-        $data =  DB::table("statistik")->select(array('tanggal', DB::raw('COUNT(hits) AS count')))->groupBy('tanggal')
+        $sub = Auth::user()->subdomain;
+        $data =  DB::table("statistik")->where('subdomain',$sub)->select(array('tanggal', DB::raw('COUNT(hits) AS count')))->groupBy('tanggal')
             ->whereYear('tanggal', '=', date('Y'))->get();
 
         return response()->json($data, 200);

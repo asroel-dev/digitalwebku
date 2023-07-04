@@ -34,7 +34,7 @@ Route::get('lang/{locale}', [LanguageController::class, 'changeTheLanguage']);
 
 
 Route::prefix('admin')->group(function () {
-    Auth::routes(['register' => false]);
+    Auth::routes();
 
     Route::prefix('dashboard')->group(function () {
         Route::get('', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -169,11 +169,6 @@ Route::prefix('admin')->group(function () {
             Route::post('edit', [App\Http\Controllers\BannerController::class, 'edit'])->name('banner.edit');
             Route::post('update', [App\Http\Controllers\BannerController::class, 'update'])->name('banner.update');
             Route::post('destroy', [App\Http\Controllers\BannerController::class, 'destroy'])->name('banner.delete');
-        });
-
-
-        Route::prefix('pegawai')->group(function () {
-            Route::get('', [App\Http\Controllers\PegawaiController::class, 'index'])->name('pegawai.index');
         });
 
         Route::prefix('faq')->group(function () {

@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Menu;
 use App\Models\MenuList;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MenuController extends Controller
 {
     public function index()
     {
-        $data = Menu::with('details')->get();
+        $sub = Auth::user()->subdomain;
+        $data = Menu::where('subdomain',$sub)->with('details')->get();
         return view('admin.menu.index', compact('data'));
     }
 
@@ -22,6 +24,7 @@ class MenuController extends Controller
         if ($request->parent_id == null) {
             $data = [
                 'name' => $request->name,
+                'subdomain' => Auth::user()->subdomain,
                 'link' => $request->link,
                 'urutan' => '0',
             ];

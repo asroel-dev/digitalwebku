@@ -14,7 +14,8 @@ class BannerController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Banner::orderByDesc('id')->get();
+            $sub = Auth::user()->subdomain;
+            $data = Banner::where('subdomain',$sub)->orderByDesc('id')->get();
 
             return Datatables::of($data)
                 ->addIndexColumn()
@@ -63,6 +64,7 @@ class BannerController extends Controller
             'is_active' => 1,
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
+            'subdomain' => Auth::user()->subdomain,
             'link' => $request->link,
         ];
     

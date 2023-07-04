@@ -4,18 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Values;
-use App\Models\Operation;
 use App\Models\Licenses;
+use App\Models\Identitas;
+use App\Models\Operation;
 use App\Models\Mostclient;
 use Illuminate\Http\Request;
-use App\Models\Identitas;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class IdentitasController extends Controller
 {
     public function index()
     {
-        $data = Identitas::first();
+        $sub = Auth::user()->subdomain;
+        $data = Identitas::where('subdomain', $sub)->first();
         return view('admin.identitas.index', compact('data'));
     }
 

@@ -14,8 +14,8 @@ class GaleriController extends Controller
     public function gambar(Request $request)
     {
         if ($request->ajax()) {
-            $data = Gallery::get();
-
+            $sub = Auth::user()->subdomain;
+            $data = Gallery::where('subdomain',$sub)->get();
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->editColumn('gambar', function ($data) {
@@ -50,6 +50,7 @@ class GaleriController extends Controller
             'album_id' => 0,
             'username' => Auth::user()->name,
             'slug' => Str::slug($request->judul),
+            'subdomain' => Auth::user()->subdomain,
             'keterangan' => "-"
         ];
 

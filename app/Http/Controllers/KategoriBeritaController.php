@@ -20,8 +20,8 @@ class KategoriBeritaController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Kategoriberita::all();
-
+            $sub = Auth::user()->subdomain;
+            $data = Kategoriberita::where('subdomain',$sub)->get();
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->editColumn('aksi', function ($data) {
@@ -67,6 +67,7 @@ class KategoriBeritaController extends Controller
             'name' => $request->name,
             'aktif' => $request->status,
             'username' => Auth::user()->name,
+            'subdomain' => Auth::user()->subdomain,
             'slug' => Str::slug($request->name),
             'sidebar' => 0
         ];

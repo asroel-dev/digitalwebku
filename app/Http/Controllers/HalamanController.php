@@ -16,8 +16,8 @@ class HalamanController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Halaman::all();
-
+            $sub = Auth::user()->subdomain;
+            $data = Halaman::where('subdomain',$sub)->get();
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->editColumn('link', function ($data) {
@@ -56,6 +56,7 @@ class HalamanController extends Controller
             'menu' => $request->menu,
             'slug' => Str::slug($request->judul),
             'isi_halaman' => $request->isi_halaman,
+            'subdomain' => Auth::user()->subdomain,
             'username' => Auth::user()->name,
             'hari' => getHari(date('l')),
             'tgl_posting' => date('Y-m-d'),

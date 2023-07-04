@@ -140,15 +140,6 @@
                      </a>
                  </div>
 
-                 <div class="menu-item">
-                    <a class="menu-link @if (Route::is('pegawai.index')) active @endif"
-                        href="{{ route('pegawai.index') }}">
-                        <span class=" menu-icon">
-                            <i class="bi bi-images fs-3"></i>
-                        </span>
-                        <span class="menu-title">Pegawai</span>
-                    </a>
-                </div>
 
 
              </div> 

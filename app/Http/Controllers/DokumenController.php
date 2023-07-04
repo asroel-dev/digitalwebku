@@ -22,10 +22,10 @@ class DokumenController extends Controller
      */
     public function index(Request $request)
     {
-        
         $kategori_file = Kategori::get();
         if ($request->ajax()) {
-            $data = Dokumen::all();
+            $sub = Auth::user()->subdomain;
+            $data = Dokumen::where('subdomain',$sub)->get();
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->editColumn('gambar', function ($data) {
@@ -85,6 +85,7 @@ class DokumenController extends Controller
         $data = [
             'judul' => $request->judul,
             'detail' => $request->detail,
+            'subdomain' => Auth::user()->subdomain,
             'kategori_id' => $request->kategori_id,
         ];
 
