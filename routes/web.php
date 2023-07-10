@@ -11,7 +11,7 @@ Route::get('locale/{locale}', Function($locale){
 });
 
 
-    // Route::get('/', [App\Http\Controllers\FrontController::class, 'index'])->name('front.index');
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('main.index');
     // Route::get('/berita', [App\Http\Controllers\FrontController::class, 'berita'])->name('beritapage.index');
     // Route::get('/dokumen', [App\Http\Controllers\FrontController::class, 'dokumen'])->name('dokumenpage.index');
     // Route::get('/pegawai', [App\Http\Controllers\FrontController::class, 'pegawai'])->name('pegawai.index');

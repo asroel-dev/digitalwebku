@@ -168,6 +168,8 @@ unset($__errorArgs, $__bag); ?>
                     </div> <!-- end about detail -->
                 </div> <!-- end col -->
 
+                <div class="col-lg-8 offset-lg-4 padding-less img order-1 jarallax" data-jarallax data-speed="0.5"
+                style="background-image:url('/assets_auth/images/user/02.jpg')"></div><!-- end col -->
                 
             </div>
             <!--end row-->
