@@ -79,101 +79,6 @@
                     <!-- Navigation Menu-->   
                     <ul class="navigation-menu">
                         <li><a href="index.html" class="sub-menu-item">Home</a></li>
-                        <li class="has-submenu parent-parent-menu-item">
-                            <a href="javascript:void(0)">Landing</a><span class="menu-arrow"></span>
-                            <ul class="submenu megamenu">
-                                <li>
-                                    <ul>
-                                        <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> Landing Pages</li>
-                                        <li><a href="index-saas.html" class="sub-menu-item">Saas</a></li>
-                                        <li><a href="index-classic-saas.html" class="sub-menu-item">Classic Saas</a></li>
-                                        <li><a href="index-agency.html" class="sub-menu-item">Agency</a></li>
-                                        <li><a href="index-apps.html" class="sub-menu-item">Application</a></li>
-                                        <li><a href="index-classic-app.html" class="sub-menu-item">Classic Application</a></li>
-                                        <li><a href="index-studio.html" class="sub-menu-item">Studio</a></li>
-                                        <li><a href="index-marketing.html" class="sub-menu-item">Marketing</a></li>
-                                        <li><a href="index-enterprise.html" class="sub-menu-item">Enterprise</a></li>
-                                        <li><a href="index-services.html" class="sub-menu-item">Service</a></li>
-                                        <li><a href="index-payments.html" class="sub-menu-item">Payments</a></li>
-                                        <li><a href="index-it-solution.html" class="sub-menu-item">IT Solution </a></li>
-                                        <li><a href="index-it-solution-two.html" class="sub-menu-item">IT Solution Two </a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <ul>
-                                        <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> Landing Pages</li>
-                                        <li><a href="index-developer.html" class="sub-menu-item">Developer</a></li>
-                                        <li><a href="index-seo-agency.html" class="sub-menu-item">SEO Agency</a></li>
-                                        <li><a href="index-hospital.html" class="sub-menu-item">Hospital</a></li>
-                                        <li><a href="index-coworking.html" class="sub-menu-item">Coworking</a></li>
-                                        <li><a href="index-business.html" class="sub-menu-item">Business</a></li>
-                                        <li><a href="index-modern-business.html" class="sub-menu-item">Modern Business</a></li>
-                                        <li><a href="index-finance.html" class="sub-menu-item">Finance </a></li>
-                                        <li><a href="index-logistics.html" class="sub-menu-item">Delivery & Logistics </a></li>
-                                        <li><a href="index-social-marketing.html" class="sub-menu-item">Social Media</a></li>
-                                        <li><a href="index-digital-agency.html" class="sub-menu-item">Digital Agency</a></li>
-                                        <li><a href="index-customer.html" class="sub-menu-item">Customer</a></li>
-                                        <li><a href="index-software.html" class="sub-menu-item">Software</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <ul>
-                                        <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> Landing Pages</li>
-                                        <li><a href="index-hotel.html" class="sub-menu-item">Hotel</a></li>
-                                        <li><a href="index-construction.html" class="sub-menu-item">Construction</a></li>
-                                        <li><a href="index-videocall.html" class="sub-menu-item">Video Conference </a></li>
-                                        <li><a href="index-blockchain.html" class="sub-menu-item">Blockchain </a></li>
-                                        <li><a href="index-crypto-two.html" class="sub-menu-item">Cryptocurrency Two </a></li>
-                                        <li><a href="index-integration.html" class="sub-menu-item">Integration</a></li>
-                                        <li><a href="index-task-management.html" class="sub-menu-item">Task Management </a></li>
-                                        <li><a href="index-email-inbox.html" class="sub-menu-item">Email Inbox </a></li>
-                                        <li><a href="index-travel.html" class="sub-menu-item">Travel </a></li>
-                                        <li><a href="index-course.html" class="sub-menu-item">Course</a></li>
-                                        <li><a href="index-online-learning.html" class="sub-menu-item">Online Learning</a></li>
-                                                <li><a href="index-insurance.html" class="sub-menu-item">Insurance</a></li>
-                                    </ul>
-                                </li>
-                        
-                                <li>
-                                    <ul>
-                                        <li class="megamenu-head"><i class="uil uil-book-open fs-6 align-middle"></i> Landing Pages</li>
-                                
-                                        <li><a href="index-single-product.html" class="sub-menu-item">Product</a></li>
-                                        <li><a href="index-car-riding.html" class="sub-menu-item">Car Ride</a></li>
-                                        <li><a href="index-landing-one.html" class="sub-menu-item">Landing One </a></li>
-                                        <li><a href="index-landing-two.html" class="sub-menu-item">Landing Two </a></li>
-                                        <li><a href="index-landing-three.html" class="sub-menu-item">Landing Three </a></li>
-                                        <li><a href="index-landing-four.html" class="sub-menu-item">Landing Four</a></li>
-                                        <li><a href="index-personal.html" class="sub-menu-item">Personal</a></li>
-                                        <li><a href="index-creative-personal.html" class="sub-menu-item">Creative Personal <span class="badge bg-success ms-2">New</span></a></li>
-                                        <li><a href="index-freelancer.html" class="sub-menu-item">Freelance </a></li>
-                                        <li><a href="index-event.html" class="sub-menu-item">Event</a></li>
-                                        <li><a href="index-ebook.html" class="sub-menu-item">E-Book</a></li>
-                                        <li><a href="index-onepage.html" class="sub-menu-item">Saas <span class="badge bg-warning ms-2">Onepage</span></a></li>
-                                    </ul>
-                                </li>
-                        
-                                <li>
-                                    <ul>
-                                        <li class="megamenu-head"><i class="uil uil-cube fs-6 align-middle"></i> Full Demos</li>
-                                        <li><a href="index-corporate.html" class="sub-menu-item">Corporate</a></li>
-                                        <li><a href="index-crypto.html" class="sub-menu-item">Cryptocurrency</a></li>
-                                        <li><a href="index-shop.html" class="sub-menu-item">Shop</a></li>
-                                        <li><a href="index-portfolio.html" class="sub-menu-item">Portfolio</a></li>
-                                        <li><a href="helpcenter-overview.html" class="sub-menu-item">Help Center</a></li>
-                                        <li><a href="index-hosting.html" class="sub-menu-item">Hosting & Domain</a></li>
-                                        <li><a href="index-job.html" class="sub-menu-item">Jobs & Careers</a></li>
-                                        <li><a href="index-real-estate.html" class="sub-menu-item">Real Estate</a></li>
-                                        <li><a href="forums.html" class="sub-menu-item">Forums</a></li>
-                                        <li><a href="index-blog.html" class="sub-menu-item">Blog or News</a></li>
-                                        <li><a href="index-nft.html" class="sub-menu-item">NFT Marketplace</a></li>
-                                        <li><a href="index-photography.html" class="sub-menu-item">Photography <span class="badge bg-success ms-2">New</span></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
 
                         <li class="has-submenu parent-parent-menu-item">
                             <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
@@ -297,7 +202,7 @@
                         </li>
 
                         <li class="has-submenu parent-parent-menu-item">
-                            <a href="javascript:void(0)">Demos</a><span class="menu-arrow"></span>
+                            <a href="javascript:void(0)">Template</a><span class="menu-arrow"></span>
                             <ul class="submenu megamenu">
                                 <li>
                                     <ul>
@@ -422,58 +327,6 @@
                             </ul>
                         </li>
 
-                        <li class="has-submenu parent-parent-menu-item">
-                            <a href="javascript:void(0)">Components</a><span class="menu-arrow"></span>
-                            <ul class="submenu megamenu">
-                                <li>
-                                    <ul>
-                                        <li><a href="ui-button.html" class="sub-menu-item"><i class="uil uil-cube fs-6 align-middle me-1"></i> Buttons</a></li>
-                                        <li><a href="ui-badges.html" class="sub-menu-item"><i class="uil uil-award fs-6 align-middle me-1"></i> Badges</a></li>
-                                        <li><a href="ui-alert.html" class="sub-menu-item"><i class="uil uil-info-circle fs-6 align-middle me-1"></i> Alert</a></li>
-                                        <li><a href="ui-dropdown.html" class="sub-menu-item"><i class="uil uil-layers fs-6 align-middle me-1"></i> Dropdowns</a></li>
-                                        <li><a href="ui-typography.html" class="sub-menu-item"><i class="uil uil-align-center-alt fs-6 align-middle me-1"></i> Typography</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <ul>
-                                        <li><a href="ui-background.html" class="sub-menu-item"><i class="uil uil-palette fs-6 align-middle me-1"></i> Background</a></li>
-                                        <li><a href="ui-text.html" class="sub-menu-item"><i class="uil uil-text fs-6 align-middle me-1"></i> Text Color</a></li>
-                                        <li><a href="ui-accordion.html" class="sub-menu-item"><i class="uil uil-list-ui-alt fs-6 align-middle me-1"></i> Accordions</a></li>
-                                        <li><a href="ui-card.html" class="sub-menu-item"><i class="uil uil-postcard fs-6 align-middle me-1"></i> Cards</a></li>
-                                        <li><a href="ui-tooltip-popover.html" class="sub-menu-item"><i class="uil uil-backspace fs-6 align-middle me-1"></i> Tooltips & Popovers</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <ul>
-                                        <li><a href="ui-shadow.html" class="sub-menu-item"><i class="uil uil-square-full fs-6 align-middle me-1"></i> Shadows</a></li>
-                                        <li><a href="ui-border.html" class="sub-menu-item"><i class="uil uil-border-out fs-6 align-middle me-1"></i> Border</a></li>
-                                        <li><a href="ui-carousel.html" class="sub-menu-item"><i class="uil uil-slider-h-range fs-6 align-middle me-1"></i> Carousel</a></li>
-                                        <li><a href="ui-form.html" class="sub-menu-item"><i class="uil uil-notes fs-6 align-middle me-1"></i> Form Elements</a></li>
-                                        <li><a href="ui-breadcrumb.html" class="sub-menu-item"><i class="uil uil-sort-amount-down fs-6 align-middle me-1"></i> Breadcrumb</a></li>
-                                    </ul>
-                                </li>
-                        
-                                <li>
-                                    <ul>
-                                        <li><a href="ui-pagination.html" class="sub-menu-item"><i class="uil uil-copy fs-6 align-middle me-1"></i> Pagination</a></li>
-                                        <li><a href="ui-avatar.html" class="sub-menu-item"><i class="uil uil-image fs-6 align-middle me-1"></i> Avatars</a></li>
-                                        <li><a href="ui-nav-tabs.html" class="sub-menu-item"><i class="uil uil-bars fs-6 align-middle me-1"></i> Nav Tabs</a></li>
-                                        <li><a href="ui-modals.html" class="sub-menu-item"><i class="uil uil-vector-square fs-6 align-middle me-1"></i> Modals</a></li>
-                                    </ul>
-                                </li>
-                        
-                                <li>
-                                    <ul>
-                                        <li><a href="ui-tables.html" class="sub-menu-item"><i class="uil uil-table fs-6 align-middle me-1"></i> Tables</a></li>
-                                        <li><a href="ui-icons.html" class="sub-menu-item"><i class="uil uil-icons fs-6 align-middle me-1"></i> Icons</a></li>
-                                        <li><a href="ui-progressbar.html" class="sub-menu-item"><i class="uil uil-brackets-curly fs-6 align-middle me-1"></i> Progressbar</a></li>
-                                        <li><a href="ui-lightbox.html" class="sub-menu-item"><i class="uil uil-play-circle fs-6 align-middle me-1"></i> Lightbox</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
 
                         <li class="has-submenu parent-menu-item">
                             <a href="javascript:void(0)">Docs</a><span class="menu-arrow"></span>
